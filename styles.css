@@ -8,12 +8,23 @@
     --black-deeper:   #040404;
     --white:          #FFFFFF;
     --cream:          #F5F1E8;
-    --orange:         #FF5B00;
-    --orange-bright:  #FF7A1F;
-    --orange-deep:    #E04E00;
-    --orange-glow:    rgba(255, 91, 0, 0.22);
-    --orange-soft:    rgba(255, 91, 0, 0.10);
-    --red:            #FF3030;
+    --bone:           #EADFCB;
+    /* Primary brand red — #E25656 */
+    --red-main:       #E25656;
+    --red-bright:     #F06A6A;
+    --red-deep:       #B73E3E;
+    --red-glow:       rgba(226, 86, 86, 0.32);
+    --red-soft:       rgba(226, 86, 86, 0.12);
+    /* Back-compat aliases — previously "orange" */
+    --orange:         #E25656;
+    --orange-bright:  #F06A6A;
+    --orange-deep:    #B73E3E;
+    --orange-glow:    rgba(226, 86, 86, 0.32);
+    --orange-soft:    rgba(226, 86, 86, 0.12);
+    /* Rustic industrial accents */
+    --mustard:        #E8B73A;
+    --court-wood:     #C08B4E;
+    --hot:            #FF3030;
     --yellow:         #FFD600;
     --gray-dark:      #111111;
     --gray-card:      #131313;

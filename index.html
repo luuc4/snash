@@ -49,6 +49,7 @@
             <div class="hero-tags">
                 <span class="hero-tag"><span class="live-dot"></span>Now Open · Vorarlberg</span>
                 <span class="hero-tag">Smash &mdash; No Bullshit</span>
+                <span class="hero-tag tag-mustard">Est. ’24 · Vorarlberg Finest</span>
             </div>
 
             <img src="snash.jpg" alt="SNASH Logo" class="hero-logo">
@@ -61,12 +62,17 @@
 
             <p class="hero-sub">
                 Dünne, knusprige Patties. Karamellisiert am Grill. Loaded Fries,
-                handgemachte Saucen, kalte Drinks &mdash; und ein Vibe wie downtown NYC.
+                handgemachte Saucen, kalte Drinks &mdash; und ein Vibe zwischen Downtown NYC und deinem Lieblings-Streetballcourt.
             </p>
 
             <div class="hero-actions">
                 <a href="menu.html" class="btn btn-primary">Zum Menü</a>
                 <a href="locations.html" class="btn btn-outline">Find Us</a>
+            </div>
+
+            <!-- Tape strip accent -->
+            <div class="tape-strip" aria-hidden="true">
+                <span>★ SMASH GANG ★ SMASH GANG ★ SMASH GANG ★</span>
             </div>
         </div>
 
@@ -87,15 +93,53 @@
             </div>
         </div>
 
+        <!-- Basketball sticker -->
+        <div class="basketball hero-ball" aria-hidden="true">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="46" fill="#E25656" stroke="#080808" stroke-width="2"/>
+                <path d="M50 4 v92 M4 50 h92" stroke="#080808" stroke-width="2" fill="none"/>
+                <path d="M14 14 Q50 50 86 14" stroke="#080808" stroke-width="2" fill="none"/>
+                <path d="M14 86 Q50 50 86 86" stroke="#080808" stroke-width="2" fill="none"/>
+            </svg>
+        </div>
+
         <div class="hero-meta">
             <div>Est. Vorarlberg</div>
             <div class="sep">//</div>
             <div>2 Locations</div>
             <div class="sep">//</div>
             <div>Open Late</div>
+            <div class="sep">//</div>
+            <div>Soundtrack: 90s Hip Hop</div>
         </div>
 
         <div class="hero-scroll">SCROLL</div>
+    </section>
+
+    <!-- ========== SCOREBOARD / TICKER ========== -->
+    <section class="scoreboard">
+        <div class="scoreboard-inner">
+            <div class="score-box">
+                <span class="score-label">Patties Today</span>
+                <span class="score-value counter" data-target="328">0</span>
+                <span class="score-dot"></span>
+            </div>
+            <div class="score-box">
+                <span class="score-label">Fries Loaded</span>
+                <span class="score-value counter" data-target="214">0</span>
+                <span class="score-dot green"></span>
+            </div>
+            <div class="score-box highlight">
+                <span class="score-label">Now Playing</span>
+                <span class="score-value marquee-text"><span>Nas &mdash; The World Is Yours</span></span>
+                <span class="score-dot red"></span>
+            </div>
+            <div class="score-box">
+                <span class="score-label">Smash Mode</span>
+                <span class="score-value">ON</span>
+                <span class="score-dot"></span>
+            </div>
+        </div>
     </section>
 
     <!-- ========== MARQUEE ========== -->
@@ -104,18 +148,20 @@
             <div>
                 <span>Smash Burgers</span><span class="star">✺</span>
                 <span class="outline">Loaded Fries</span><span class="star">✺</span>
-                <span>Good Vibes</span><span class="star">✺</span>
-                <span class="outline">Cold Drinks</span><span class="star">✺</span>
+                <span>Hip Hop</span><span class="star">✺</span>
+                <span class="outline">Courtside Vibes</span><span class="star">✺</span>
                 <span>Dornbirn</span><span class="star">✺</span>
                 <span class="outline">Bürs</span><span class="star">✺</span>
+                <span>Smash Gang</span><span class="star">✺</span>
             </div>
             <div aria-hidden="true">
                 <span>Smash Burgers</span><span class="star">✺</span>
                 <span class="outline">Loaded Fries</span><span class="star">✺</span>
-                <span>Good Vibes</span><span class="star">✺</span>
-                <span class="outline">Cold Drinks</span><span class="star">✺</span>
+                <span>Hip Hop</span><span class="star">✺</span>
+                <span class="outline">Courtside Vibes</span><span class="star">✺</span>
                 <span>Dornbirn</span><span class="star">✺</span>
                 <span class="outline">Bürs</span><span class="star">✺</span>
+                <span>Smash Gang</span><span class="star">✺</span>
             </div>
         </div>
     </div>
@@ -132,8 +178,9 @@
                     <strong>handgemachte Saucen</strong>. Dazu Loaded Fries die süchtig machen.
                 </p>
                 <p class="vibe-text">
-                    Schwarze Wände. Basketball-Trikots an der Decke. Fette Beats.
-                    Moderne Hocker, warmes Licht, kalte Drinks. Das ist <strong>SNASH</strong>.
+                    Backsteinwände. Basketball-Trikots an der Decke. Vintage Boombox im Eck.
+                    <strong>90s Hip Hop</strong> aus den Boxen, rostige Edison-Bulbs überm Tresen,
+                    moderne Hocker, kalte Drinks. Rustic Industrial meets Courtside. Das ist <strong>SNASH</strong>.
                 </p>
                 <a href="story.html" class="btn-ghost">Unsere Story</a>
             </div>
@@ -172,6 +219,77 @@
             <div class="stat reveal delay-3">
                 <div class="stat-number">∞</div>
                 <div class="stat-label">Vibes</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PLAYLIST / SOUNDTRACK ========== -->
+    <section class="playlist-section">
+        <div class="playlist-wrap">
+            <div class="playlist-head reveal">
+                <p class="section-label">Now Playing</p>
+                <h2 class="section-title">Die <span class="orange">SNASH</span><br>Mixtape.</h2>
+                <p class="playlist-intro">
+                    Kein Lift-Muzak. Kein Radio-Pop. Bei uns läuft das, was zum Smashen passt:
+                    <strong>90s &amp; 00s Hip Hop</strong>, Golden Era Classics, fette Beats &mdash; und ab und zu was Neues aus dem Underground.
+                </p>
+                <div class="playlist-badge">
+                    <span class="playlist-badge-dot"></span>
+                    Vol. 04 &mdash; Courtside Classics
+                </div>
+            </div>
+
+            <div class="mixtape reveal delay-1">
+                <div class="mixtape-cassette">
+                    <div class="cassette-top">
+                        <span class="cassette-label">SNASH TAPE · SIDE A</span>
+                        <span class="cassette-brand">90 MIN</span>
+                    </div>
+                    <div class="cassette-reels">
+                        <div class="reel"><span></span></div>
+                        <div class="cassette-window">
+                            <div class="cassette-tape"></div>
+                        </div>
+                        <div class="reel"><span></span></div>
+                    </div>
+                    <div class="cassette-bottom">
+                        <span>★ SMASH GANG ★ SMASH GANG ★</span>
+                    </div>
+                </div>
+
+                <ol class="playlist-list">
+                    <li>
+                        <span class="track-num">01</span>
+                        <span class="track-title">The World Is Yours</span>
+                        <span class="track-artist">Nas</span>
+                    </li>
+                    <li>
+                        <span class="track-num">02</span>
+                        <span class="track-title">Juicy</span>
+                        <span class="track-artist">Notorious B.I.G.</span>
+                    </li>
+                    <li class="playing">
+                        <span class="track-num">03</span>
+                        <span class="track-title">C.R.E.A.M.</span>
+                        <span class="track-artist">Wu-Tang Clan</span>
+                        <span class="playing-bars" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+                    </li>
+                    <li>
+                        <span class="track-num">04</span>
+                        <span class="track-title">California Love</span>
+                        <span class="track-artist">2Pac</span>
+                    </li>
+                    <li>
+                        <span class="track-num">05</span>
+                        <span class="track-title">N.Y. State of Mind</span>
+                        <span class="track-artist">Nas</span>
+                    </li>
+                    <li>
+                        <span class="track-num">06</span>
+                        <span class="track-title">Passin' Me By</span>
+                        <span class="track-artist">The Pharcyde</span>
+                    </li>
+                </ol>
             </div>
         </div>
     </section>
@@ -241,17 +359,19 @@
                 <span class="outline">Fresh Daily</span><span class="star">✺</span>
                 <span>Handmade</span><span class="star">✺</span>
                 <span class="outline">Open Late</span><span class="star">✺</span>
-                <span>Takeout</span><span class="star">✺</span>
-                <span class="outline">Order Online</span><span class="star">✺</span>
+                <span>90s Beats</span><span class="star">✺</span>
+                <span class="outline">Streetball</span><span class="star">✺</span>
                 <span>Smash Life</span><span class="star">✺</span>
+                <span class="outline">No Standard</span><span class="star">✺</span>
             </div>
             <div aria-hidden="true">
                 <span class="outline">Fresh Daily</span><span class="star">✺</span>
                 <span>Handmade</span><span class="star">✺</span>
                 <span class="outline">Open Late</span><span class="star">✺</span>
-                <span>Takeout</span><span class="star">✺</span>
-                <span class="outline">Order Online</span><span class="star">✺</span>
+                <span>90s Beats</span><span class="star">✺</span>
+                <span class="outline">Streetball</span><span class="star">✺</span>
                 <span>Smash Life</span><span class="star">✺</span>
+                <span class="outline">No Standard</span><span class="star">✺</span>
             </div>
         </div>
     </div>
@@ -390,6 +510,61 @@
                         <div class="review-author-meta">Bludenz</div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CREW CORNER / JERSEYS ========== -->
+    <section class="crew-corner">
+        <div class="crew-head reveal">
+            <p class="section-label">Hall of Fame</p>
+            <h2 class="section-title">Unsere<br><span class="orange">Starting Five</span>.</h2>
+            <p class="crew-intro">
+                An der Decke hängen keine Lampen &mdash; da hängen Trikots. Das sind unsere Signature Burger.
+                Jeder mit seiner Nummer, seinem Namen, seinem Style.
+            </p>
+        </div>
+
+        <div class="jersey-grid">
+            <div class="jersey reveal">
+                <div class="jersey-shirt">
+                    <span class="jersey-team">SNASH</span>
+                    <span class="jersey-number">01</span>
+                    <span class="jersey-name">OG SMASH</span>
+                </div>
+                <p class="jersey-role">The Classic</p>
+            </div>
+            <div class="jersey reveal delay-1">
+                <div class="jersey-shirt">
+                    <span class="jersey-team">SNASH</span>
+                    <span class="jersey-number">23</span>
+                    <span class="jersey-name">BACON BOSS</span>
+                </div>
+                <p class="jersey-role">MVP Candidate</p>
+            </div>
+            <div class="jersey reveal delay-2">
+                <div class="jersey-shirt">
+                    <span class="jersey-team">SNASH</span>
+                    <span class="jersey-number">03</span>
+                    <span class="jersey-name">CHEESER</span>
+                </div>
+                <p class="jersey-role">The Triple</p>
+            </div>
+            <div class="jersey reveal delay-3">
+                <div class="jersey-shirt">
+                    <span class="jersey-team">SNASH</span>
+                    <span class="jersey-number">99</span>
+                    <span class="jersey-name">SPICY</span>
+                </div>
+                <p class="jersey-role">Hot Shot</p>
+            </div>
+            <div class="jersey reveal delay-4">
+                <div class="jersey-shirt">
+                    <span class="jersey-team">SNASH</span>
+                    <span class="jersey-number">07</span>
+                    <span class="jersey-name">CHICK</span>
+                </div>
+                <p class="jersey-role">The Sixth Man</p>
             </div>
         </div>
     </section>
