@@ -7,11 +7,88 @@
     <meta name="description" content="SNASH Burger Bar — Smash Burgers, Loaded Fries und coole Vibes. Zwei Locations in Vorarlberg: Dornbirn & Bürs. Online bestellen zur Abholung.">
     <meta name="theme-color" content="#080808">
     <link rel="icon" type="image/png" href="snash-nobg.png">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="restaurant.restaurant">
+    <meta property="og:site_name" content="SNASH Burger Bar">
+    <meta property="og:title" content="SNASH Burger Bar — Smash Burgers in Dornbirn & Bürs">
+    <meta property="og:description" content="Dünne, knusprige Smash Patties. Loaded Fries. 90s Hip Hop. Zwei Locations in Vorarlberg.">
+    <meta property="og:image" content="snash.jpg">
+    <meta property="og:locale" content="de_AT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SNASH Burger Bar — Smash Burgers in Dornbirn & Bürs">
+    <meta name="twitter:description" content="Dünne, knusprige Smash Patties. Loaded Fries. 90s Hip Hop. Zwei Locations in Vorarlberg.">
+    <meta name="twitter:image" content="snash.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="home.css">
+
+    <!-- Structured data: Restaurant (both locations) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Restaurant",
+          "@id": "#snash-dornbirn",
+          "name": "SNASH Burger Bar",
+          "image": "snash.jpg",
+          "servesCuisine": ["American", "Burger"],
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Marktstraße 12a",
+            "postalCode": "6850",
+            "addressLocality": "Dornbirn",
+            "addressRegion": "Vorarlberg",
+            "addressCountry": "AT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 47.4135,
+            "longitude": 9.7425
+          },
+          "hasMenu": "https://order.storekit.com/snash-burger-2/menu",
+          "sameAs": ["https://www.instagram.com/snash.dornbirn/"],
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday"], "opens": "17:00", "closes": "23:30" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "17:00", "closes": "01:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "15:00", "closes": "01:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "15:00", "closes": "22:00" }
+          ]
+        },
+        {
+          "@type": "Restaurant",
+          "@id": "#snash-buers",
+          "name": "SNASH Burger Joint",
+          "image": "snash.jpg",
+          "servesCuisine": ["American", "Burger"],
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bremschlstraße 4",
+            "postalCode": "6706",
+            "addressLocality": "Bürs",
+            "addressRegion": "Vorarlberg",
+            "addressCountry": "AT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 47.1475,
+            "longitude": 9.7700
+          },
+          "hasMenu": "https://leaf-order.eu/m/snashbuers/",
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "11:30", "closes": "22:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:30", "closes": "21:00" }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -25,7 +102,7 @@
     <!-- ========== NAVIGATION ========== -->
     <nav class="site-nav" id="navbar">
         <a href="index.html" class="nav-logo">
-            <img src="snash-nobg.png" alt="SNASH Burger Bar">
+            <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
         </a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
             <span></span><span></span><span></span>
@@ -52,7 +129,7 @@
                 <span class="hero-tag tag-mustard">Est. ’24 · Vorarlberg Finest</span>
             </div>
 
-            <img src="snash-nobg.png" alt="SNASH Logo" class="hero-logo">
+            <img src="snash-nobg.png" alt="SNASH Logo" class="hero-logo" width="400" height="400">
 
             <h1 class="hero-title">
                 <span class="line"><span>Smash</span></span>
@@ -185,7 +262,7 @@
             <div class="vibe-visual reveal delay-1">
                 <div class="halftone"></div>
                 <div class="circle"></div>
-                <img src="snash-nobg.png" alt="SNASH" class="logo-mark">
+                <img src="snash-nobg.png" alt="SNASH" class="logo-mark" width="400" height="400">
                 <div class="sticker-badge vibe-sticker">
                     <svg viewBox="0 0 200 200" aria-hidden="true">
                         <defs>
@@ -592,7 +669,7 @@
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-col footer-brand">
-                <img src="snash-nobg.png" alt="SNASH Burger Bar">
+                <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
                 <p>Smash Burgers, Loaded Fries und Good Vibes. Zwei Locations in Vorarlberg &mdash; Dornbirn & Bürs.</p>
                 <div class="footer-socials">
                     <a href="https://www.instagram.com/snash.dornbirn/" target="_blank" rel="noopener" aria-label="Instagram Dornbirn">

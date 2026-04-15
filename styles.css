@@ -456,6 +456,39 @@ section {
 .reveal.delay-3 { transition-delay: 0.3s; }
 .reveal.delay-4 { transition-delay: 0.4s; }
 
+/* ===================== UTILITIES ===================== */
+.text-orange { color: var(--orange); }
+
+/* ===================== REDUCED MOTION ===================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .marquee-track,
+    .sticker-badge,
+    .sticker-center,
+    .basketball,
+    .hero-glow,
+    .reel,
+    .cassette-tape,
+    .live-dot,
+    .score-dot,
+    .playing-bars span {
+        animation: none !important;
+    }
+}
+
 /* ===================== STICKER ===================== */
 .sticker-badge {
     position: absolute;

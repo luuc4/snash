@@ -289,3 +289,15 @@
     .loc-detail-row { grid-template-columns: 36px 1fr; }
     .loc-actions .btn { flex: 1 1 100%; justify-content: center; }
 }
+
+@media (max-width: 480px) {
+    .loc-section { padding: 3rem 1rem; }
+    .loc-details { padding: 1.2rem; gap: 1.2rem; }
+    .loc-detail-row { grid-template-columns: 32px 1fr; gap: 0.8rem; }
+    .loc-detail-icon { width: 32px; height: 32px; }
+    .loc-detail-icon svg { width: 15px; height: 15px; }
+    .loc-hours-table { font-size: 0.82rem; }
+    .loc-map { height: 320px; }
+    .loc-map-label { padding: 0.8rem 1rem; gap: 0.6rem; }
+    .loc-divider { padding: 3.5rem 1rem; }
+}
