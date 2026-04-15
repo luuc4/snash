@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations · SNASH Burger Bar</title>
+    <meta name="description" content="SNASH Burger Bar Locations — Dornbirn (Marktstraße 12a) und Bürs (Bremschlstraße 4). Öffnungszeiten, Adressen und Bestell-Links.">
+    <meta name="theme-color" content="#080808">
+    <link rel="icon" type="image/jpeg" href="snash.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="locations.css">
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="site-nav" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="snash.jpg" alt="SNASH Burger Bar">
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="locations.html" class="active">Locations</a></li>
+            <li><a href="story.html">Story</a></li>
+            <li><a href="#order" class="nav-cta">Bestellen</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">/</span>
+                <span>Locations</span>
+            </div>
+            <h1>
+                <span class="outline">Find</span> <span class="orange">Us.</span>
+            </h1>
+            <p>Zwei Locations. Ein Vibe. Such dir aus, wo du smashen willst.</p>
+        </div>
+    </header>
+
+    <!-- ========== DORNBIRN ========== -->
+    <section id="dornbirn" class="loc-section">
+        <div class="loc-wrap">
+            <div class="loc-info reveal">
+                <span class="loc-tag"><span class="live-dot"></span>Flagship Store</span>
+                <h2 class="loc-title">SNASH <span class="outline">Burger</span> Bar</h2>
+                <p class="loc-city">Dornbirn · Marktstraße</p>
+
+                <p class="loc-description">
+                    Unser <strong>Flagship Store</strong> mitten in Dornbirn. Das volle Programm, die volle Atmosphäre:
+                    schwarze Wände, Basketball-Trikots an der Decke, warmes Licht, fette Beats und die
+                    <strong>komplette Speisekarte</strong>. Ideal zum Reinsetzen, Abhängen und Smashen.
+                </p>
+
+                <div class="loc-details">
+                    <div class="loc-detail-row">
+                        <div class="loc-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="loc-detail-content">
+                            <h4>Adresse</h4>
+                            <address>
+                                <a href="https://maps.google.com/?q=Marktstra%C3%9Fe+12a%2C+6850+Dornbirn" target="_blank" rel="noopener">
+                                    Marktstraße 12a<br>6850 Dornbirn, Österreich
+                                </a>
+                            </address>
+                        </div>
+                    </div>
+
+                    <div class="loc-detail-row">
+                        <div class="loc-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="loc-detail-content">
+                            <h4>Öffnungszeiten</h4>
+                            <table class="loc-hours-table">
+                                <tr class="closed"><td>Montag</td><td>Geschlossen</td></tr>
+                                <tr class="closed"><td>Dienstag</td><td>Geschlossen</td></tr>
+                                <tr><td>Mittwoch</td><td>17:00 – 23:30</td></tr>
+                                <tr><td>Donnerstag</td><td>17:00 – 23:30</td></tr>
+                                <tr><td>Freitag</td><td>17:00 – 01:00</td></tr>
+                                <tr><td>Samstag</td><td>15:00 – 01:00</td></tr>
+                                <tr><td>Sonntag</td><td>15:00 – 22:00</td></tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="loc-detail-row">
+                        <div class="loc-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </div>
+                        <div class="loc-detail-content">
+                            <h4>Social</h4>
+                            <p><a href="https://www.instagram.com/snash.dornbirn/" target="_blank" rel="noopener">@snash.dornbirn</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loc-actions">
+                    <a href="https://order.storekit.com/snash-burger-2/menu" target="_blank" rel="noopener" class="btn btn-primary">Jetzt bestellen</a>
+                    <a href="https://maps.google.com/?q=Marktstra%C3%9Fe+12a%2C+6850+Dornbirn" target="_blank" rel="noopener" class="btn btn-outline">Route planen</a>
+                </div>
+            </div>
+
+            <div class="loc-map reveal delay-1">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=9.736%2C47.411%2C9.749%2C47.416&amp;layer=mapnik&amp;marker=47.4135%2C9.7425"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="SNASH Dornbirn Map"></iframe>
+                <div class="loc-map-label">
+                    <span>47.4135° N, 9.7425° E</span>
+                    <a href="https://maps.google.com/?q=Marktstra%C3%9Fe+12a%2C+6850+Dornbirn" target="_blank" rel="noopener">Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="loc-divider">
+        <h2>One Vibe. Two Spots.</h2>
+        <p>— Smash · Dornbirn · Bürs · Smash —</p>
+    </div>
+
+    <!-- ========== BÜRS ========== -->
+    <section id="buers" class="loc-section reverse">
+        <div class="loc-wrap">
+            <div class="loc-info reveal delay-1">
+                <span class="loc-tag"><span class="live-dot"></span>Burger Joint</span>
+                <h2 class="loc-title">SNASH <span class="outline">Burger</span> Joint</h2>
+                <p class="loc-city">Bürs · Bremschlstraße</p>
+
+                <p class="loc-description">
+                    Der kleine, feine Ableger in Bürs. Weniger Tische, mehr Fokus auf
+                    <strong>Quick Bites & Takeaway</strong>. Kleineres Sortiment, andere Preise —
+                    aber genau das gleiche SNASH DNA: dünn, knusprig, smashed. Perfekt für den Mittags-Break.
+                </p>
+
+                <div class="loc-details">
+                    <div class="loc-detail-row">
+                        <div class="loc-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="loc-detail-content">
+                            <h4>Adresse</h4>
+                            <address>
+                                <a href="https://maps.google.com/?q=Bremschlstra%C3%9Fe+4%2C+6706+B%C3%BCrs" target="_blank" rel="noopener">
+                                    Bremschlstraße 4<br>6706 Bürs, Österreich
+                                </a>
+                            </address>
+                        </div>
+                    </div>
+
+                    <div class="loc-detail-row">
+                        <div class="loc-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="loc-detail-content">
+                            <h4>Öffnungszeiten</h4>
+                            <table class="loc-hours-table">
+                                <tr class="closed"><td>Montag</td><td>Geschlossen</td></tr>
+                                <tr><td>Dienstag</td><td>11:30 – 22:00</td></tr>
+                                <tr><td>Mittwoch</td><td>11:30 – 22:00</td></tr>
+                                <tr><td>Donnerstag</td><td>11:30 – 22:00</td></tr>
+                                <tr><td>Freitag</td><td>11:30 – 22:00</td></tr>
+                                <tr><td>Samstag</td><td>11:30 – 22:00</td></tr>
+                                <tr><td>Sonntag</td><td>11:30 – 21:00</td></tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="loc-detail-row">
+                        <div class="loc-detail-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="loc-detail-content">
+                            <h4>Info</h4>
+                            <p>Kleineres Sortiment als in Dornbirn. Ideal für Quick Bites & Takeaway.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loc-actions">
+                    <a href="https://leaf-order.eu/m/snashbuers/" target="_blank" rel="noopener" class="btn btn-primary">Jetzt bestellen</a>
+                    <a href="https://maps.google.com/?q=Bremschlstra%C3%9Fe+4%2C+6706+B%C3%BCrs" target="_blank" rel="noopener" class="btn btn-outline">Route planen</a>
+                </div>
+            </div>
+
+            <div class="loc-map reveal">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=9.764%2C47.143%2C9.776%2C47.151&amp;layer=mapnik&amp;marker=47.1475%2C9.7700"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="SNASH Bürs Map"></iframe>
+                <div class="loc-map-label">
+                    <span>47.1475° N, 9.7700° E</span>
+                    <a href="https://maps.google.com/?q=Bremschlstra%C3%9Fe+4%2C+6706+B%C3%BCrs" target="_blank" rel="noopener">Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <div>
+                <span>Dornbirn</span><span class="star">✺</span>
+                <span class="outline">Bürs</span><span class="star">✺</span>
+                <span>Open Late</span><span class="star">✺</span>
+                <span class="outline">Vorarlberg</span><span class="star">✺</span>
+                <span>Smash Life</span><span class="star">✺</span>
+            </div>
+            <div aria-hidden="true">
+                <span>Dornbirn</span><span class="star">✺</span>
+                <span class="outline">Bürs</span><span class="star">✺</span>
+                <span>Open Late</span><span class="star">✺</span>
+                <span class="outline">Vorarlberg</span><span class="star">✺</span>
+                <span>Smash Life</span><span class="star">✺</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-col footer-brand">
+                <img src="snash.jpg" alt="SNASH Burger Bar">
+                <p>Smash Burgers, Loaded Fries und Good Vibes. Zwei Locations in Vorarlberg &mdash; Dornbirn & Bürs.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/snash.dornbirn/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Menü</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menü</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="story.html">Story</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Dornbirn</h4>
+                <address>
+                    Marktstraße 12a<br>
+                    6850 Dornbirn<br>
+                    <a href="https://order.storekit.com/snash-burger-2/menu" target="_blank" rel="noopener">Bestellen →</a>
+                </address>
+            </div>
+            <div class="footer-col">
+                <h4>Bürs</h4>
+                <address>
+                    Bremschlstraße 4<br>
+                    6706 Bürs<br>
+                    <a href="https://leaf-order.eu/m/snashbuers/" target="_blank" rel="noopener">Bestellen →</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-huge">SNASH</div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year">2025</span> SNASH Burger Bar</span>
+            <span>Made with 🔥 in Vorarlberg</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

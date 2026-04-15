@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menü · SNASH Burger Bar</title>
+    <meta name="description" content="Das Menü von SNASH Burger Bar — Smash Burgers, Loaded Fries, Sides und Drinks. Dornbirn & Bürs.">
+    <meta name="theme-color" content="#080808">
+    <link rel="icon" type="image/jpeg" href="snash.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="site-nav" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="snash.jpg" alt="SNASH Burger Bar">
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html" class="active">Menü</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="story.html">Story</a></li>
+            <li><a href="#order" class="nav-cta">Bestellen</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <header class="page-header">
+        <div class="page-header-content">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">/</span>
+                <span>Menü</span>
+            </div>
+            <h1>
+                <span class="outline">The</span>
+                <span class="orange">Menu.</span>
+            </h1>
+            <p>Smash Burgers. Loaded Fries. Cold Drinks. Wähl deine Location unten und bestell direkt online.</p>
+        </div>
+    </header>
+
+    <!-- ========== MENU ========== -->
+    <section style="padding-top: 0;">
+
+        <!-- Notice -->
+        <div class="menu-notice reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <div>
+                <strong>Hinweis:</strong> Die hier gezeigten Gerichte sind Platzhalter für das Sortiment. Die aktuellen Preise, Verfügbarkeit und das komplette Sortiment findest du direkt im Bestell-Link deiner Location. Bürs hat ein kleineres Sortiment als Dornbirn.
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="menu-tabs reveal">
+            <button class="menu-tab active" data-location="dornbirn">
+                SNASH Dornbirn
+                <span class="small">Burger Bar · Flagship</span>
+            </button>
+            <button class="menu-tab" data-location="buers">
+                SNASH Bürs
+                <span class="small">Burger Joint</span>
+            </button>
+        </div>
+
+        <!-- ========== DORNBIRN PANEL ========== -->
+        <div class="menu-panel active" data-location="dornbirn">
+
+            <!-- Smash Burgers -->
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    <h2 class="menu-category-title"><span class="orange">Smash</span> Burgers <span class="small">/ 01</span></h2>
+                    <span class="menu-category-sub">— Dünn · Knusprig · Karamellisiert</span>
+                </div>
+                <div class="menu-grid">
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">The OG Smash</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Double Smash Patty, American Cheese, Pickles, Onions, Snash Sauce im Brioche Bun.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Classic</span>
+                            <span class="menu-item-tag">Double</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Bacon Boss</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Double Smash, Crispy Bacon, Cheddar, Crispy Onions, Smoked Mayo.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Bacon</span>
+                            <span class="menu-item-tag new">Fan Favorite</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">The Cheeser</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Triple Smash, doppelt Cheddar & American Cheese, Grilled Onions, Classic Sauce.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Triple</span>
+                            <span class="menu-item-tag">Cheese</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Spicy Smash</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Double Smash, Jalapeños, Pepper Jack Cheese, Chipotle Mayo, Crispy Onions.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag hot">Spicy 🌶</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Chick Smash</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Buttermilk Crispy Chicken, Slaw, Pickles, Ranch Dressing, Brioche Bun.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Chicken</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Veggie Smash</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Plant-based Patty, Avocado, Lettuce, Tomato, Pickled Onions, Vegan Mayo.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag veggie">Veggie</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Loaded Fries -->
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    <h2 class="menu-category-title"><span class="orange">Loaded</span> Fries <span class="small">/ 02</span></h2>
+                    <span class="menu-category-sub">— Golden · Crispy · Maxed Out</span>
+                </div>
+                <div class="menu-grid">
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Classic Fries</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Dünn geschnitten, golden, knusprig. Nur mit Meersalz.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Cheese Fries</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Classic Fries, überzogen mit unserer hausgemachten Cheese Sauce.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Smash Fries</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Fries, Patty Bits, Grilled Onions, Cheese Sauce, Snash Drip. Loaded af.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag new">Signature</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Spicy Loaded</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Fries mit Jalapeños, Chipotle Sauce, Pepper Jack, Spring Onions.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag hot">Spicy 🌶</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Bacon Ranch</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Fries, Crispy Bacon, Ranch Dressing, Cheddar, Spring Onions.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Sweet Potato</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Süßkartoffel Fries mit Aioli Dip. Die süße Alternative.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Sides -->
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    <h2 class="menu-category-title"><span class="orange">Sides</span> & Bites <span class="small">/ 03</span></h2>
+                    <span class="menu-category-sub">— Für zwischendurch</span>
+                </div>
+                <div class="menu-grid">
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Chicken Nuggets</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">6 Stück, hausgemacht, knusprig paniert. Mit Dip nach Wahl.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Mozzarella Sticks</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Knusprig paniert, innen zerlaufender Mozzarella, mit Marinara Sauce.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Onion Rings</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Dicke Zwiebelringe in unserer eigenen Panade.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Jalapeño Poppers</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Mit Frischkäse gefüllt, paniert und frittiert. Heiß & cremig.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag hot">Spicy 🌶</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Drinks -->
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    <h2 class="menu-category-title"><span class="orange">Drinks</span> & Shakes <span class="small">/ 04</span></h2>
+                    <span class="menu-category-sub">— Ice Cold</span>
+                </div>
+                <div class="menu-grid">
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Soft Drinks</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Coca-Cola, Coke Zero, Sprite, Fanta, Almdudler — 0,33l / 0,5l.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Craft Lemonade</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Limonade vom Fass. Wechselnde Sorten. Frisch & spritzig.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Milkshakes</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Vanilla, Chocolate, Strawberry oder Oreo. Cremig, süß, stark.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag new">Favorit</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Bier & Softs</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Frisch gezapft und aus der Flasche. Frag die Crew nach der aktuellen Auswahl.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="menu-order-cta reveal">
+                <h3>Bereit <span style="color:var(--orange);">bestellt</span>?</h3>
+                <p>Direkt online zur Abholung in Dornbirn bestellen. Kein Warten, nur Genuss.</p>
+                <a href="https://order.storekit.com/snash-burger-2/menu" target="_blank" rel="noopener" class="btn btn-primary">Jetzt Dornbirn bestellen →</a>
+            </div>
+        </div>
+
+        <!-- ========== BÜRS PANEL ========== -->
+        <div class="menu-panel" data-location="buers">
+
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    <h2 class="menu-category-title"><span class="orange">Joint</span> Burgers <span class="small">/ 01</span></h2>
+                    <span class="menu-category-sub">— Quick · Fresh · Smashed</span>
+                </div>
+                <div class="menu-grid">
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Snash Classic</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Single Smash Patty, American Cheese, Pickles, Onions, Snash Sauce.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Classic</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Double Smash</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Double Patty, doppelt Cheese, Pickles, Sauce. Der grosse Hunger-Stopper.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag">Double</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Cheese Burger</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Smash Patty, doppelt American Cheese, Classic Sauce. Simple & perfekt.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Chicken Burger</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Crispy Chicken, Slaw, Pickles, Mayo, Brioche Bun.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    <h2 class="menu-category-title"><span class="orange">Fries</span> & Sides <span class="small">/ 02</span></h2>
+                    <span class="menu-category-sub">— Golden & Crunchy</span>
+                </div>
+                <div class="menu-grid">
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Classic Fries</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Golden, knusprig, mit Meersalz. Der Klassiker.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Cheese Fries</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Classic Fries mit zerlaufener Cheese Sauce.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Chicken Nuggets</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">6 Stück, knusprig, mit Dip.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Onion Rings</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Dicke, goldene Zwiebelringe.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    <h2 class="menu-category-title"><span class="orange">Drinks</span><span class="small">/ 03</span></h2>
+                    <span class="menu-category-sub">— Ice Cold</span>
+                </div>
+                <div class="menu-grid">
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Soft Drinks</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Coca-Cola, Zero, Sprite, Fanta, Almdudler — 0,33l / 0,5l.</p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Wasser</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Still oder sprudelnd.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="menu-order-cta reveal">
+                <h3>Bereit <span style="color:var(--orange);">bestellt</span>?</h3>
+                <p>Direkt online zur Abholung in Bürs bestellen. Schnell & unkompliziert.</p>
+                <a href="https://leaf-order.eu/m/snashbuers/" target="_blank" rel="noopener" class="btn btn-primary">Jetzt Bürs bestellen →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <div>
+                <span>Hungry?</span><span class="star">✺</span>
+                <span class="outline">Order Online</span><span class="star">✺</span>
+                <span>Pick Up</span><span class="star">✺</span>
+                <span class="outline">Smash Life</span><span class="star">✺</span>
+                <span>Fresh Daily</span><span class="star">✺</span>
+            </div>
+            <div aria-hidden="true">
+                <span>Hungry?</span><span class="star">✺</span>
+                <span class="outline">Order Online</span><span class="star">✺</span>
+                <span>Pick Up</span><span class="star">✺</span>
+                <span class="outline">Smash Life</span><span class="star">✺</span>
+                <span>Fresh Daily</span><span class="star">✺</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-col footer-brand">
+                <img src="snash.jpg" alt="SNASH Burger Bar">
+                <p>Smash Burgers, Loaded Fries und Good Vibes. Zwei Locations in Vorarlberg &mdash; Dornbirn & Bürs.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/snash.dornbirn/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Menü</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menü</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="story.html">Story</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Dornbirn</h4>
+                <address>
+                    Marktstraße 12a<br>
+                    6850 Dornbirn<br>
+                    <a href="https://order.storekit.com/snash-burger-2/menu" target="_blank" rel="noopener">Bestellen →</a>
+                </address>
+            </div>
+            <div class="footer-col">
+                <h4>Bürs</h4>
+                <address>
+                    Bremschlstraße 4<br>
+                    6706 Bürs<br>
+                    <a href="https://leaf-order.eu/m/snashbuers/" target="_blank" rel="noopener">Bestellen →</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-huge">SNASH</div>
+        <div class="footer-bottom">
+            <span>&copy; <span id="year">2025</span> SNASH Burger Bar</span>
+            <span>Made with 🔥 in Vorarlberg</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
