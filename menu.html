@@ -6,10 +6,23 @@
     <title>Menü · SNASH Burger Bar</title>
     <meta name="description" content="Das Menü von SNASH Burger Bar — Smash Burgers, Loaded Fries, Sides und Drinks. Dornbirn & Bürs.">
     <meta name="theme-color" content="#080808">
-    <link rel="icon" type="image/jpeg" href="snash.jpg">
+    <link rel="icon" type="image/png" href="snash-nobg.png">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="restaurant.menu">
+    <meta property="og:site_name" content="SNASH Burger Bar">
+    <meta property="og:title" content="Menü · SNASH Burger Bar">
+    <meta property="og:description" content="Smash Burgers, Loaded Fries, Sides und Drinks. Das volle Menü der SNASH Burger Bar in Dornbirn & Bürs.">
+    <meta property="og:image" content="snash.jpg">
+    <meta property="og:locale" content="de_AT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Menü · SNASH Burger Bar">
+    <meta name="twitter:description" content="Smash Burgers, Loaded Fries, Sides und Drinks. Das volle Menü der SNASH Burger Bar in Dornbirn & Bürs.">
+    <meta name="twitter:image" content="snash.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="menu.css">
 </head>
@@ -22,7 +35,7 @@
     <!-- ========== NAVIGATION ========== -->
     <nav class="site-nav" id="navbar">
         <a href="index.html" class="nav-logo">
-            <img src="snash.jpg" alt="SNASH Burger Bar">
+            <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
         </a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
             <span></span><span></span><span></span>
@@ -53,7 +66,7 @@
     </header>
 
     <!-- ========== MENU ========== -->
-    <section style="padding-top: 0;">
+    <section class="menu-section">
 
         <!-- Notice -->
         <div class="menu-notice reveal">
@@ -92,37 +105,37 @@
 
                     <div class="menu-item">
                         <div class="menu-item-head">
-                            <h3 class="menu-item-name">The OG Smash</h3>
+                            <h3 class="menu-item-name">Cheeseburger</h3>
                             <span class="menu-item-price placeholder">€ —</span>
                         </div>
-                        <p class="menu-item-desc">Double Smash Patty, American Cheese, Pickles, Onions, Snash Sauce im Brioche Bun.</p>
+                        <p class="menu-item-desc">Smash Patty, doppelt American Cheese, Pickles, Onions, Snash Sauce im Brioche Bun. Der Klassiker.</p>
                         <div class="menu-item-tags">
                             <span class="menu-item-tag">Classic</span>
-                            <span class="menu-item-tag">Double</span>
+                            <span class="menu-item-tag">Cheese</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-head">
-                            <h3 class="menu-item-name">Bacon Boss</h3>
+                            <h3 class="menu-item-name">Oklahoma</h3>
                             <span class="menu-item-price placeholder">€ —</span>
                         </div>
-                        <p class="menu-item-desc">Double Smash, Crispy Bacon, Cheddar, Crispy Onions, Smoked Mayo.</p>
+                        <p class="menu-item-desc">Oklahoma-Style: Zwiebeln direkt ins Patty gesmashed, karamellisiert bis sie süß werden. American Cheese, Pickles, Mustard.</p>
                         <div class="menu-item-tags">
-                            <span class="menu-item-tag">Bacon</span>
+                            <span class="menu-item-tag">Signature</span>
                             <span class="menu-item-tag new">Fan Favorite</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-head">
-                            <h3 class="menu-item-name">The Cheeser</h3>
+                            <h3 class="menu-item-name">Supernash</h3>
                             <span class="menu-item-price placeholder">€ —</span>
                         </div>
-                        <p class="menu-item-desc">Triple Smash, doppelt Cheddar & American Cheese, Grilled Onions, Classic Sauce.</p>
+                        <p class="menu-item-desc">Der hauseigene Signature Burger. Double Patty, Cheddar & American, Crispy Onions, Bacon und Snash Drip. MVP.</p>
                         <div class="menu-item-tags">
-                            <span class="menu-item-tag">Triple</span>
-                            <span class="menu-item-tag">Cheese</span>
+                            <span class="menu-item-tag">Signature</span>
+                            <span class="menu-item-tag new">MVP</span>
                         </div>
                     </div>
 
@@ -321,7 +334,7 @@
 
             <!-- CTA -->
             <div class="menu-order-cta reveal">
-                <h3>Bereit <span style="color:var(--orange);">bestellt</span>?</h3>
+                <h3>Bereit <span class="text-orange">bestellt</span>?</h3>
                 <p>Direkt online zur Abholung in Dornbirn bestellen. Kein Warten, nur Genuss.</p>
                 <a href="https://order.storekit.com/snash-burger-2/menu" target="_blank" rel="noopener" class="btn btn-primary">Jetzt Dornbirn bestellen →</a>
             </div>
@@ -339,10 +352,10 @@
 
                     <div class="menu-item">
                         <div class="menu-item-head">
-                            <h3 class="menu-item-name">Snash Classic</h3>
+                            <h3 class="menu-item-name">Cheeseburger</h3>
                             <span class="menu-item-price placeholder">€ —</span>
                         </div>
-                        <p class="menu-item-desc">Single Smash Patty, American Cheese, Pickles, Onions, Snash Sauce.</p>
+                        <p class="menu-item-desc">Smash Patty, doppelt American Cheese, Pickles, Onions, Snash Sauce. Der Klassiker.</p>
                         <div class="menu-item-tags">
                             <span class="menu-item-tag">Classic</span>
                         </div>
@@ -350,21 +363,25 @@
 
                     <div class="menu-item">
                         <div class="menu-item-head">
-                            <h3 class="menu-item-name">Double Smash</h3>
+                            <h3 class="menu-item-name">Oklahoma</h3>
                             <span class="menu-item-price placeholder">€ —</span>
                         </div>
-                        <p class="menu-item-desc">Double Patty, doppelt Cheese, Pickles, Sauce. Der grosse Hunger-Stopper.</p>
+                        <p class="menu-item-desc">Oklahoma-Style: Zwiebeln direkt ins Patty gesmashed, karamellisiert, American Cheese, Pickles.</p>
                         <div class="menu-item-tags">
-                            <span class="menu-item-tag">Double</span>
+                            <span class="menu-item-tag">Signature</span>
+                            <span class="menu-item-tag new">Fan Favorite</span>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-head">
-                            <h3 class="menu-item-name">Cheese Burger</h3>
+                            <h3 class="menu-item-name">Supernash</h3>
                             <span class="menu-item-price placeholder">€ —</span>
                         </div>
-                        <p class="menu-item-desc">Smash Patty, doppelt American Cheese, Classic Sauce. Simple & perfekt.</p>
+                        <p class="menu-item-desc">Unser Signature Burger. Double Patty, Cheddar & American, Crispy Onions, Bacon, Snash Drip.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag new">MVP</span>
+                        </div>
                     </div>
 
                     <div class="menu-item">
@@ -448,7 +465,7 @@
 
             <!-- CTA -->
             <div class="menu-order-cta reveal">
-                <h3>Bereit <span style="color:var(--orange);">bestellt</span>?</h3>
+                <h3>Bereit <span class="text-orange">bestellt</span>?</h3>
                 <p>Direkt online zur Abholung in Bürs bestellen. Schnell & unkompliziert.</p>
                 <a href="https://leaf-order.eu/m/snashbuers/" target="_blank" rel="noopener" class="btn btn-primary">Jetzt Bürs bestellen →</a>
             </div>
@@ -479,7 +496,7 @@
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-col footer-brand">
-                <img src="snash.jpg" alt="SNASH Burger Bar">
+                <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
                 <p>Smash Burgers, Loaded Fries und Good Vibes. Zwei Locations in Vorarlberg &mdash; Dornbirn & Bürs.</p>
                 <div class="footer-socials">
                     <a href="https://www.instagram.com/snash.dornbirn/" target="_blank" rel="noopener" aria-label="Instagram">
@@ -520,7 +537,11 @@
         <div class="footer-huge">SNASH</div>
         <div class="footer-bottom">
             <span>&copy; <span id="year">2025</span> SNASH Burger Bar</span>
-            <span>Made with 🔥 in Vorarlberg</span>
+            <span class="footer-legal-links">
+                <a href="impressum.html">Impressum</a>
+                <span class="sep">·</span>
+                <span>Built by <a href="https://lucagreinecker.at" target="_blank" rel="noopener">Luca Greinecker</a></span>
+            </span>
         </div>
     </footer>
 

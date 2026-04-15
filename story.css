@@ -395,3 +395,26 @@
 
     .faq-item summary { font-size: 1.1rem; }
 }
+
+@media (max-width: 480px) {
+    .manifesto,
+    .principles,
+    .timeline,
+    .faq,
+    .vibe-gallery {
+        padding: 4rem 1rem;
+    }
+    .manifesto-text p { font-size: 1rem; }
+    .principle { padding: 2rem 1.3rem; }
+    .gallery-grid { grid-auto-rows: 120px; gap: 0.8rem; }
+    .gallery-item { padding: 1rem; }
+    .gallery-item span { font-size: 1.15rem; }
+    .timeline-year { font-size: 1.6rem; }
+    .timeline-title { font-size: 1.25rem; }
+    .timeline-item { padding: 0 0 2.2rem 3rem; }
+    .faq-item summary {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+    .faq-item summary::after { font-size: 1.6rem; }
+}

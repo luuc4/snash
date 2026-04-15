@@ -6,12 +6,91 @@
     <title>SNASH Burger Bar | Smash Burgers & Loaded Fries · Dornbirn & Bürs</title>
     <meta name="description" content="SNASH Burger Bar — Smash Burgers, Loaded Fries und coole Vibes. Zwei Locations in Vorarlberg: Dornbirn & Bürs. Online bestellen zur Abholung.">
     <meta name="theme-color" content="#080808">
-    <link rel="icon" type="image/jpeg" href="snash.jpg">
+    <link rel="icon" type="image/png" href="snash-nobg.png">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="restaurant.restaurant">
+    <meta property="og:site_name" content="SNASH Burger Bar">
+    <meta property="og:title" content="SNASH Burger Bar — Smash Burgers in Dornbirn & Bürs">
+    <meta property="og:description" content="Dünne, knusprige Smash Patties. Loaded Fries. 90s Hip Hop. Zwei Locations in Vorarlberg.">
+    <meta property="og:image" content="snash.jpg">
+    <meta property="og:locale" content="de_AT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SNASH Burger Bar — Smash Burgers in Dornbirn & Bürs">
+    <meta name="twitter:description" content="Dünne, knusprige Smash Patties. Loaded Fries. 90s Hip Hop. Zwei Locations in Vorarlberg.">
+    <meta name="twitter:image" content="snash.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="home.css">
+
+    <!-- Structured data: Restaurant (both locations) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Restaurant",
+          "@id": "#snash-dornbirn",
+          "name": "SNASH Burger Bar",
+          "legalName": "SNASH Gastronomie GmbH",
+          "image": "snash.jpg",
+          "servesCuisine": ["American", "Burger"],
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Marktstraße 12a",
+            "postalCode": "6850",
+            "addressLocality": "Dornbirn",
+            "addressRegion": "Vorarlberg",
+            "addressCountry": "AT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 47.4135,
+            "longitude": 9.7425
+          },
+          "hasMenu": "https://order.storekit.com/snash-burger-2/menu",
+          "sameAs": ["https://www.instagram.com/snash.dornbirn/"],
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday"], "opens": "17:00", "closes": "23:30" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "17:00", "closes": "01:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "15:00", "closes": "01:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "15:00", "closes": "22:00" }
+          ]
+        },
+        {
+          "@type": "Restaurant",
+          "@id": "#snash-buers",
+          "name": "SNASH Burger Joint",
+          "legalName": "SNASH Gastronomie GmbH",
+          "image": "snash.jpg",
+          "servesCuisine": ["American", "Burger"],
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bremschlstraße 4",
+            "postalCode": "6706",
+            "addressLocality": "Bürs",
+            "addressRegion": "Vorarlberg",
+            "addressCountry": "AT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 47.1475,
+            "longitude": 9.7700
+          },
+          "hasMenu": "https://leaf-order.eu/m/snashbuers/",
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "11:30", "closes": "22:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:30", "closes": "21:00" }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -25,7 +104,7 @@
     <!-- ========== NAVIGATION ========== -->
     <nav class="site-nav" id="navbar">
         <a href="index.html" class="nav-logo">
-            <img src="snash.jpg" alt="SNASH Burger Bar">
+            <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
         </a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
             <span></span><span></span><span></span>
@@ -52,7 +131,7 @@
                 <span class="hero-tag tag-mustard">Est. ’24 · Vorarlberg Finest</span>
             </div>
 
-            <img src="snash.jpg" alt="SNASH Logo" class="hero-logo">
+            <img src="snash-nobg.png" alt="SNASH Logo" class="hero-logo" width="400" height="400">
 
             <h1 class="hero-title">
                 <span class="line"><span>Smash</span></span>
@@ -72,7 +151,7 @@
 
             <!-- Tape strip accent -->
             <div class="tape-strip" aria-hidden="true">
-                <span>★ SMASH GANG ★ SMASH GANG ★ SMASH GANG ★</span>
+                <span>★ IT'S MY CHEATDAY ★ IT'S MY CHEATDAY ★</span>
             </div>
         </div>
 
@@ -80,17 +159,14 @@
         <div class="sticker-badge hero-sticker">
             <svg viewBox="0 0 200 200" aria-hidden="true">
                 <defs>
-                    <path id="heroCircle" d="M 100, 100 m -72, 0 a 72,72 0 1,1 144,0 a 72,72 0 1,1 -144,0"></path>
+                    <path id="heroCircle" d="M 100, 100 m -82, 0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0"></path>
                 </defs>
-                <text fill="#080808" font-family="Anton, sans-serif" font-size="23" letter-spacing="2">
+                <circle cx="100" cy="100" r="62" fill="none" stroke="#080808" stroke-width="1.2" stroke-dasharray="2 4" opacity="0.45"></circle>
+                <text fill="#080808" font-family="Anton, sans-serif" font-size="18" letter-spacing="4">
                     <textPath href="#heroCircle" startOffset="0">SMASH · BURGERS · LOADED · FRIES · </textPath>
                 </text>
             </svg>
-            <div class="sticker-center">
-                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-            </div>
+            <div class="sticker-center">★</div>
         </div>
 
         <!-- Basketball sticker -->
@@ -146,22 +222,22 @@
     <div class="marquee">
         <div class="marquee-track">
             <div>
-                <span>Smash Burgers</span><span class="star">✺</span>
+                <span>Cheeseburger</span><span class="star">✺</span>
+                <span class="outline">Oklahoma</span><span class="star">✺</span>
+                <span>Supernash</span><span class="star">✺</span>
                 <span class="outline">Loaded Fries</span><span class="star">✺</span>
-                <span>Hip Hop</span><span class="star">✺</span>
-                <span class="outline">Courtside Vibes</span><span class="star">✺</span>
                 <span>Dornbirn</span><span class="star">✺</span>
                 <span class="outline">Bürs</span><span class="star">✺</span>
-                <span>Smash Gang</span><span class="star">✺</span>
+                <span>It's My Cheatday</span><span class="star">✺</span>
             </div>
             <div aria-hidden="true">
-                <span>Smash Burgers</span><span class="star">✺</span>
+                <span>Cheeseburger</span><span class="star">✺</span>
+                <span class="outline">Oklahoma</span><span class="star">✺</span>
+                <span>Supernash</span><span class="star">✺</span>
                 <span class="outline">Loaded Fries</span><span class="star">✺</span>
-                <span>Hip Hop</span><span class="star">✺</span>
-                <span class="outline">Courtside Vibes</span><span class="star">✺</span>
                 <span>Dornbirn</span><span class="star">✺</span>
                 <span class="outline">Bürs</span><span class="star">✺</span>
-                <span>Smash Gang</span><span class="star">✺</span>
+                <span>It's My Cheatday</span><span class="star">✺</span>
             </div>
         </div>
     </div>
@@ -188,17 +264,18 @@
             <div class="vibe-visual reveal delay-1">
                 <div class="halftone"></div>
                 <div class="circle"></div>
-                <img src="snash.jpg" alt="SNASH" class="logo-mark">
+                <img src="snash-nobg.png" alt="SNASH" class="logo-mark" width="400" height="400">
                 <div class="sticker-badge vibe-sticker">
                     <svg viewBox="0 0 200 200" aria-hidden="true">
                         <defs>
-                            <path id="vibeCircle" d="M 100, 100 m -64, 0 a 64,64 0 1,1 128,0 a 64,64 0 1,1 -128,0"></path>
+                            <path id="vibeCircle" d="M 100, 100 m -82, 0 a 82,82 0 1,1 164,0 a 82,82 0 1,1 -164,0"></path>
                         </defs>
-                        <text fill="#080808" font-family="Anton, sans-serif" font-size="20" letter-spacing="2">
+                        <circle cx="100" cy="100" r="62" fill="none" stroke="#080808" stroke-width="1.2" stroke-dasharray="2 4" opacity="0.45"></circle>
+                        <text fill="#080808" font-family="Anton, sans-serif" font-size="17" letter-spacing="4">
                             <textPath href="#vibeCircle" startOffset="0">FRESH · HOT · SMASHED · DAILY · </textPath>
                         </text>
                     </svg>
-                    <div class="sticker-center" style="font-size:1.3rem;">★</div>
+                    <div class="sticker-center">★</div>
                 </div>
             </div>
         </div>
@@ -253,7 +330,7 @@
                         <div class="reel"><span></span></div>
                     </div>
                     <div class="cassette-bottom">
-                        <span>★ SMASH GANG ★ SMASH GANG ★</span>
+                        <span>★ SIDE A · 90 MIN · HI-FI ★</span>
                     </div>
                 </div>
 
@@ -502,7 +579,7 @@
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 </div>
-                <p class="review-text">„Hab in Bürs den Double Smash probiert. Ehrlich: ich bin seitdem dreimal die Woche da. Hilfe."</p>
+                <p class="review-text">„Hab in Bürs den Supernash probiert. Ehrlich: ich bin seitdem dreimal die Woche da. Hilfe."</p>
                 <div class="review-author">
                     <div class="review-avatar">T</div>
                     <div>
@@ -530,7 +607,7 @@
                 <div class="jersey-shirt">
                     <span class="jersey-team">SNASH</span>
                     <span class="jersey-number">01</span>
-                    <span class="jersey-name">OG SMASH</span>
+                    <span class="jersey-name">CHEESE</span>
                 </div>
                 <p class="jersey-role">The Classic</p>
             </div>
@@ -538,17 +615,17 @@
                 <div class="jersey-shirt">
                     <span class="jersey-team">SNASH</span>
                     <span class="jersey-number">23</span>
-                    <span class="jersey-name">BACON BOSS</span>
+                    <span class="jersey-name">OKLAHOMA</span>
                 </div>
                 <p class="jersey-role">MVP Candidate</p>
             </div>
             <div class="jersey reveal delay-2">
                 <div class="jersey-shirt">
                     <span class="jersey-team">SNASH</span>
-                    <span class="jersey-number">03</span>
-                    <span class="jersey-name">CHEESER</span>
+                    <span class="jersey-number">07</span>
+                    <span class="jersey-name">SUPERNASH</span>
                 </div>
-                <p class="jersey-role">The Triple</p>
+                <p class="jersey-role">Franchise Player</p>
             </div>
             <div class="jersey reveal delay-3">
                 <div class="jersey-shirt">
@@ -561,10 +638,10 @@
             <div class="jersey reveal delay-4">
                 <div class="jersey-shirt">
                     <span class="jersey-team">SNASH</span>
-                    <span class="jersey-number">07</span>
+                    <span class="jersey-number">03</span>
                     <span class="jersey-name">CHICK</span>
                 </div>
-                <p class="jersey-role">The Sixth Man</p>
+                <p class="jersey-role">Sixth Man</p>
             </div>
         </div>
     </section>
@@ -594,7 +671,7 @@
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-col footer-brand">
-                <img src="snash.jpg" alt="SNASH Burger Bar">
+                <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
                 <p>Smash Burgers, Loaded Fries und Good Vibes. Zwei Locations in Vorarlberg &mdash; Dornbirn & Bürs.</p>
                 <div class="footer-socials">
                     <a href="https://www.instagram.com/snash.dornbirn/" target="_blank" rel="noopener" aria-label="Instagram Dornbirn">
@@ -640,7 +717,11 @@
 
         <div class="footer-bottom">
             <span>&copy; <span id="year">2025</span> SNASH Burger Bar</span>
-            <span>Made with 🔥 in Vorarlberg</span>
+            <span class="footer-legal-links">
+                <a href="impressum.html">Impressum</a>
+                <span class="sep">·</span>
+                <span>Built by <a href="https://lucagreinecker.at" target="_blank" rel="noopener">Luca Greinecker</a></span>
+            </span>
         </div>
     </footer>
 

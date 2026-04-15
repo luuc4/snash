@@ -6,10 +6,23 @@
     <title>Locations · SNASH Burger Bar</title>
     <meta name="description" content="SNASH Burger Bar Locations — Dornbirn (Marktstraße 12a) und Bürs (Bremschlstraße 4). Öffnungszeiten, Adressen und Bestell-Links.">
     <meta name="theme-color" content="#080808">
-    <link rel="icon" type="image/jpeg" href="snash.jpg">
+    <link rel="icon" type="image/png" href="snash-nobg.png">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SNASH Burger Bar">
+    <meta property="og:title" content="Locations · SNASH Burger Bar">
+    <meta property="og:description" content="Zwei SNASH Locations in Vorarlberg — Dornbirn (Marktstraße 12a) und Bürs (Bremschlstraße 4). Öffnungszeiten und Adressen.">
+    <meta property="og:image" content="snash.jpg">
+    <meta property="og:locale" content="de_AT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Locations · SNASH Burger Bar">
+    <meta name="twitter:description" content="Zwei SNASH Locations in Vorarlberg — Dornbirn (Marktstraße 12a) und Bürs (Bremschlstraße 4).">
+    <meta name="twitter:image" content="snash.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="locations.css">
 </head>
@@ -22,7 +35,7 @@
     <!-- ========== NAVIGATION ========== -->
     <nav class="site-nav" id="navbar">
         <a href="index.html" class="nav-logo">
-            <img src="snash.jpg" alt="SNASH Burger Bar">
+            <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
         </a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
             <span></span><span></span><span></span>
@@ -255,7 +268,7 @@
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-col footer-brand">
-                <img src="snash.jpg" alt="SNASH Burger Bar">
+                <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
                 <p>Smash Burgers, Loaded Fries und Good Vibes. Zwei Locations in Vorarlberg &mdash; Dornbirn & Bürs.</p>
                 <div class="footer-socials">
                     <a href="https://www.instagram.com/snash.dornbirn/" target="_blank" rel="noopener" aria-label="Instagram">
@@ -296,7 +309,11 @@
         <div class="footer-huge">SNASH</div>
         <div class="footer-bottom">
             <span>&copy; <span id="year">2025</span> SNASH Burger Bar</span>
-            <span>Made with 🔥 in Vorarlberg</span>
+            <span class="footer-legal-links">
+                <a href="impressum.html">Impressum</a>
+                <span class="sep">·</span>
+                <span>Built by <a href="https://lucagreinecker.at" target="_blank" rel="noopener">Luca Greinecker</a></span>
+            </span>
         </div>
     </footer>
 
