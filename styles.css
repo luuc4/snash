@@ -789,6 +789,24 @@ footer.site-footer {
     text-transform: uppercase;
 }
 
+.footer-legal-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-legal-links .sep { color: var(--orange); }
+
+.footer-legal-links a {
+    color: var(--gray-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal-links a:hover { color: var(--orange); }
+
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 1024px) {
     .footer-content {
