@@ -57,18 +57,95 @@
     const navLinks = document.getElementById('navLinks');
 
     if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            const open = menuToggle.classList.toggle('active');
+        const setMenu = (open) => {
+            menuToggle.classList.toggle('active', open);
             navLinks.classList.toggle('open', open);
             document.body.classList.toggle('no-scroll', open);
-        });
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuToggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+        };
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-controls', 'navLinks');
+
+        menuToggle.addEventListener('click', () => setMenu(!navLinks.classList.contains('open')));
         navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navLinks.classList.remove('open');
-                document.body.classList.remove('no-scroll');
-            });
+            link.addEventListener('click', () => setMenu(false));
         });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('open')) setMenu(false);
+        });
+    }
+
+    /* ========== OPEN-NOW LIVE INDICATOR ========== */
+    // Hours per location, 0=Sun..6=Sat. Multiple ranges per day are supported.
+    // "0130" means 01:30 the FOLLOWING day.
+    const LOCATIONS = {
+        dornbirn: {
+            label: 'Dornbirn',
+            hours: {
+                3: ['1700-2330'],
+                4: ['1700-2330'],
+                5: ['1700-2500'],
+                6: ['1500-2500'],
+                0: ['1500-2200']
+            }
+        },
+        buers: {
+            label: 'Bürs',
+            hours: {
+                2: ['1130-2200'], 3: ['1130-2200'], 4: ['1130-2200'],
+                5: ['1130-2200'], 6: ['1130-2200'], 0: ['1130-2100']
+            }
+        }
+    };
+
+    const status = document.getElementById('navStatus');
+    if (status) {
+        const text = status.querySelector('.nav-status-text');
+
+        const minOfDay = (hhmm) => parseInt(hhmm.slice(0, 2), 10) * 60 + parseInt(hhmm.slice(2), 10);
+
+        // returns minutes until close if open (0 if closed); null if closed
+        function locationStatus(loc, now) {
+            const day = now.getDay();
+            const minutes = now.getHours() * 60 + now.getMinutes();
+            // overnight from yesterday?
+            const yesterday = (day + 6) % 7;
+            const ranges = [
+                ...((loc.hours[yesterday] || []).map(r => ({ start: minOfDay(r.split('-')[0]) - 1440, end: minOfDay(r.split('-')[1]) - 1440 }))),
+                ...((loc.hours[day] || []).map(r => ({ start: minOfDay(r.split('-')[0]), end: minOfDay(r.split('-')[1]) })))
+            ];
+            for (const r of ranges) {
+                if (minutes >= r.start && minutes < r.end) return r.end - minutes;
+            }
+            return null;
+        }
+
+        function render() {
+            const now = new Date();
+            const states = Object.entries(LOCATIONS).map(([k, l]) => ({ key: k, label: l.label, mins: locationStatus(l, now) }));
+            const open = states.filter(s => s.mins !== null);
+
+            if (!open.length) {
+                status.dataset.state = 'closed';
+                text.innerHTML = '<span class="nav-status-label">Geschlossen</span><span class="nav-status-short">Closed</span>';
+                return;
+            }
+            // Pick the one closing latest as the "main" indicator
+            open.sort((a, b) => b.mins - a.mins);
+            const top = open[0];
+            const closingSoon = top.mins <= 45;
+            status.dataset.state = closingSoon ? 'closing' : 'open';
+            const longText = closingSoon
+                ? `Schließt in ${top.mins} min · ${top.label}`
+                : (open.length > 1 ? 'Beide Locations offen' : `Open · ${top.label}`);
+            const shortText = closingSoon ? `${top.mins}m` : 'Open';
+            text.innerHTML = `<span class="nav-status-label">${longText}</span><span class="nav-status-short">${shortText}</span>`;
+        }
+
+        render();
+        setInterval(render, 60000);
+        status.hidden = false;
     }
 
     /* ========== REVEAL ON SCROLL ========== */

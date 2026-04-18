@@ -103,10 +103,14 @@
 
     <!-- ========== NAVIGATION ========== -->
     <nav class="site-nav" id="navbar">
-        <a href="index.html" class="nav-logo">
-            <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
+        <a href="index.html" class="nav-logo" aria-label="SNASH Burger Bar — Startseite">
+            <img src="snash-nobg.png" alt="" width="400" height="400" fetchpriority="high">
+            <span class="nav-status" id="navStatus" hidden aria-live="polite">
+                <span class="nav-status-dot" aria-hidden="true"></span>
+                <span class="nav-status-text"></span>
+            </span>
         </a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links" id="navLinks">
@@ -131,7 +135,7 @@
                 <span class="hero-tag tag-mustard">Est. ’24 · Vorarlberg Finest</span>
             </div>
 
-            <img src="snash-nobg.png" alt="SNASH Logo" class="hero-logo" width="400" height="400">
+            <img src="snash-nobg.png" alt="SNASH Logo" class="hero-logo" width="400" height="400" decoding="async" fetchpriority="high">
 
             <h1 class="hero-title">
                 <span class="line"><span>Smash</span></span>
@@ -264,7 +268,7 @@
             <div class="vibe-visual reveal delay-1">
                 <div class="halftone"></div>
                 <div class="circle"></div>
-                <img src="snash-nobg.png" alt="SNASH" class="logo-mark" width="400" height="400">
+                <img src="snash-nobg.png" alt="" class="logo-mark" width="400" height="400" loading="lazy" decoding="async">
                 <div class="sticker-badge vibe-sticker">
                     <svg viewBox="0 0 200 200" aria-hidden="true">
                         <defs>
@@ -488,6 +492,12 @@
                     </div>
                 </div>
 
+                <ul class="card-highlights" aria-label="Highlights Dornbirn">
+                    <li>Volle Karte</li>
+                    <li>Loaded Fries</li>
+                    <li>Open Late</li>
+                </ul>
+
                 <div class="location-actions">
                     <a href="https://order.storekit.com/snash-burger-2/menu" target="_blank" rel="noopener" class="btn btn-primary">Bestellen</a>
                     <a href="locations.html#dornbirn" class="btn btn-outline">Details</a>
@@ -518,6 +528,12 @@
                         <div><span>So</span><span>11:30 – 21:00</span></div>
                     </div>
                 </div>
+
+                <ul class="card-highlights" aria-label="Highlights Bürs">
+                    <li>Quick Bite</li>
+                    <li>Klassische Pommes</li>
+                    <li>Linda&rsquo;s Icecream</li>
+                </ul>
 
                 <div class="location-actions">
                     <a href="https://leaf-order.eu/m/snashbuers/" target="_blank" rel="noopener" class="btn btn-primary">Bestellen</a>
@@ -671,8 +687,8 @@
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-col footer-brand">
-                <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
-                <p>Smash Burgers, Loaded Fries und Good Vibes. Zwei Locations in Vorarlberg &mdash; Dornbirn & Bürs.</p>
+                <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400" loading="lazy" decoding="async">
+                <p>Smash Burgers &amp; Good Vibes. Loaded Fries in Dornbirn, Linda&rsquo;s Icecream in Bürs.</p>
                 <div class="footer-socials">
                     <a href="https://www.instagram.com/snash.dornbirn/" target="_blank" rel="noopener" aria-label="Instagram Dornbirn">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

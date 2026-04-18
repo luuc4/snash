@@ -91,6 +91,34 @@
 
 .loc-description strong { color: var(--white); font-weight: 500; }
 
+.loc-highlights {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: -1rem 0 2.5rem;
+    padding: 0;
+}
+
+.loc-highlights li {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cream);
+    padding: 0.45rem 0.85rem;
+    border: 1px solid var(--gray-border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.loc-highlights li:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+    background: var(--orange-soft);
+}
+
 .loc-details {
     display: flex;
     flex-direction: column;

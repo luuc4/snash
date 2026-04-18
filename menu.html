@@ -34,10 +34,14 @@
 
     <!-- ========== NAVIGATION ========== -->
     <nav class="site-nav" id="navbar">
-        <a href="index.html" class="nav-logo">
-            <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
+        <a href="index.html" class="nav-logo" aria-label="SNASH Burger Bar — Startseite">
+            <img src="snash-nobg.png" alt="" width="400" height="400" fetchpriority="high">
+            <span class="nav-status" id="navStatus" hidden aria-live="polite">
+                <span class="nav-status-dot" aria-hidden="true"></span>
+                <span class="nav-status-text"></span>
+            </span>
         </a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links" id="navLinks">
@@ -76,7 +80,9 @@
                 <line x1="12" y1="16" x2="12.01" y2="16"></line>
             </svg>
             <div>
-                <strong>Hinweis:</strong> Die hier gezeigten Gerichte sind Platzhalter für das Sortiment. Die aktuellen Preise, Verfügbarkeit und das komplette Sortiment findest du direkt im Bestell-Link deiner Location. Bürs hat ein kleineres Sortiment als Dornbirn.
+                <strong>Hinweis:</strong> Die hier gezeigten Gerichte sind Platzhalter für das Sortiment &mdash; aktuelle Preise &amp; Verfügbarkeit findest du direkt im Bestell-Link.
+                <strong class="text-orange">Dornbirn</strong> ist das Flagship mit voller Karte inkl. Loaded Fries.
+                <strong class="text-orange">Bürs</strong> fährt das Quick-Bite-Sortiment &mdash; Burger, klassische Pommes (Cheese Sauce als Extra) und Eis von <strong>Linda&rsquo;s Icecream</strong> zum Dessert.
             </div>
         </div>
 
@@ -397,41 +403,25 @@
 
             <div class="menu-category">
                 <div class="menu-category-header">
-                    <h2 class="menu-category-title"><span class="orange">Fries</span> & Sides <span class="small">/ 02</span></h2>
-                    <span class="menu-category-sub">— Golden & Crunchy</span>
+                    <h2 class="menu-category-title"><span class="orange">Pommes</span> <span class="small">/ 02</span></h2>
+                    <span class="menu-category-sub">— Golden &amp; Crunchy &middot; Cheese Sauce als Extra</span>
                 </div>
                 <div class="menu-grid">
 
                     <div class="menu-item">
                         <div class="menu-item-head">
-                            <h3 class="menu-item-name">Classic Fries</h3>
+                            <h3 class="menu-item-name">Pommes</h3>
                             <span class="menu-item-price placeholder">€ —</span>
                         </div>
-                        <p class="menu-item-desc">Golden, knusprig, mit Meersalz. Der Klassiker.</p>
+                        <p class="menu-item-desc">Golden, knusprig, mit Meersalz. Der Klassiker. Mit Ketchup oder Mayo.</p>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-head">
-                            <h3 class="menu-item-name">Cheese Fries</h3>
+                            <h3 class="menu-item-name">Cheese Sauce <span class="menu-item-tag">Extra</span></h3>
                             <span class="menu-item-price placeholder">€ —</span>
                         </div>
-                        <p class="menu-item-desc">Classic Fries mit zerlaufener Cheese Sauce.</p>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-head">
-                            <h3 class="menu-item-name">Chicken Nuggets</h3>
-                            <span class="menu-item-price placeholder">€ —</span>
-                        </div>
-                        <p class="menu-item-desc">6 Stück, knusprig, mit Dip.</p>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-head">
-                            <h3 class="menu-item-name">Onion Rings</h3>
-                            <span class="menu-item-price placeholder">€ —</span>
-                        </div>
-                        <p class="menu-item-desc">Dicke, goldene Zwiebelringe.</p>
+                        <p class="menu-item-desc">Hausgemachte Cheese Sauce als Topping oder Dip &mdash; perfekter Sidekick zu Pommes &amp; Burger.</p>
                     </div>
 
                 </div>
@@ -439,7 +429,37 @@
 
             <div class="menu-category">
                 <div class="menu-category-header">
-                    <h2 class="menu-category-title"><span class="orange">Drinks</span><span class="small">/ 03</span></h2>
+                    <h2 class="menu-category-title"><span class="orange">Eis</span> by Linda&rsquo;s <span class="small">/ 03</span></h2>
+                    <span class="menu-category-sub">— Vorarlberger Handwerks-Eis &middot; nur in Bürs</span>
+                </div>
+                <div class="menu-grid">
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Eiskugeln</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Wechselnde Sorten von <strong>Linda&rsquo;s Icecream</strong> &mdash; handgemacht in Vorarlberg. Frag die Crew nach den heutigen Sorten.</p>
+                        <div class="menu-item-tags">
+                            <span class="menu-item-tag new">Bürs Only</span>
+                            <span class="menu-item-tag">Local Hero</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-head">
+                            <h3 class="menu-item-name">Becher / Waffel</h3>
+                            <span class="menu-item-price placeholder">€ —</span>
+                        </div>
+                        <p class="menu-item-desc">Im Becher oder in der knusprigen Waffel. Topping oder Sauce gefällig? Frag nach.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <div class="menu-category-header">
+                    <h2 class="menu-category-title"><span class="orange">Drinks</span> <span class="small">/ 04</span></h2>
                     <span class="menu-category-sub">— Ice Cold</span>
                 </div>
                 <div class="menu-grid">
@@ -449,7 +469,7 @@
                             <h3 class="menu-item-name">Soft Drinks</h3>
                             <span class="menu-item-price placeholder">€ —</span>
                         </div>
-                        <p class="menu-item-desc">Coca-Cola, Zero, Sprite, Fanta, Almdudler — 0,33l / 0,5l.</p>
+                        <p class="menu-item-desc">Coca-Cola, Zero, Sprite, Fanta, Almdudler &mdash; 0,33l / 0,5l.</p>
                     </div>
 
                     <div class="menu-item">
@@ -466,7 +486,7 @@
             <!-- CTA -->
             <div class="menu-order-cta reveal">
                 <h3>Bereit <span class="text-orange">bestellt</span>?</h3>
-                <p>Direkt online zur Abholung in Bürs bestellen. Schnell & unkompliziert.</p>
+                <p>Direkt online zur Abholung in Bürs bestellen. Schnell &amp; unkompliziert.</p>
                 <a href="https://leaf-order.eu/m/snashbuers/" target="_blank" rel="noopener" class="btn btn-primary">Jetzt Bürs bestellen →</a>
             </div>
         </div>
@@ -496,8 +516,8 @@
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-col footer-brand">
-                <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
-                <p>Smash Burgers, Loaded Fries und Good Vibes. Zwei Locations in Vorarlberg &mdash; Dornbirn & Bürs.</p>
+                <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400" loading="lazy" decoding="async">
+                <p>Smash Burgers &amp; Good Vibes. Loaded Fries in Dornbirn, Linda&rsquo;s Icecream in Bürs.</p>
                 <div class="footer-socials">
                     <a href="https://www.instagram.com/snash.dornbirn/" target="_blank" rel="noopener" aria-label="Instagram">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
