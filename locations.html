@@ -34,10 +34,14 @@
 
     <!-- ========== NAVIGATION ========== -->
     <nav class="site-nav" id="navbar">
-        <a href="index.html" class="nav-logo">
-            <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
+        <a href="index.html" class="nav-logo" aria-label="SNASH Burger Bar — Startseite">
+            <img src="snash-nobg.png" alt="" width="400" height="400" fetchpriority="high">
+            <span class="nav-status" id="navStatus" hidden aria-live="polite">
+                <span class="nav-status-dot" aria-hidden="true"></span>
+                <span class="nav-status-text"></span>
+            </span>
         </a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
             <span></span><span></span><span></span>
         </button>
         <ul class="nav-links" id="navLinks">
@@ -268,7 +272,7 @@
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-col footer-brand">
-                <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400">
+                <img src="snash-nobg.png" alt="SNASH Burger Bar" width="400" height="400" loading="lazy" decoding="async">
                 <p>Smash Burgers, Loaded Fries und Good Vibes. Zwei Locations in Vorarlberg &mdash; Dornbirn & Bürs.</p>
                 <div class="footer-socials">
                     <a href="https://www.instagram.com/snash.dornbirn/" target="_blank" rel="noopener" aria-label="Instagram">
